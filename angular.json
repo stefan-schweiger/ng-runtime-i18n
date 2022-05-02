@@ -13,6 +13,9 @@
           "strict": true
         }
       },
+      "i18n": {
+        "sourceLocale": "en-x-source"
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -83,7 +86,10 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-runtime-i18n:build"
+            "browserTarget": "ng-runtime-i18n:build",
+            "format": "json",
+            "outputPath": "src/assets/i18n",
+            "outFile": "en-x-source.json"
           }
         },
         "test": {

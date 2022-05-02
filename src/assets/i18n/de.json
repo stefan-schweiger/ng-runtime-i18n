@@ -1,0 +1,8 @@
+{
+  "locale": "de",
+  "translations": {
+    "my-key-1": "Hallo Übersetzungstest Test (aus Datei)",
+    "my-key-2": "Hallo {$INTERPOLATION} (aus Datei)",
+    "my-key-3": "Übersetzter Wert im Code."
+  }
+}

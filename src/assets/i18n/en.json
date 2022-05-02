@@ -1,0 +1,7 @@
+{
+  "locale": "en-x-source",
+  "translations": {
+    "my-key-1": "Hello Translation Test (from file)",
+    "my-key-2": "Hello {$INTERPOLATION} (from file)"
+  }
+}

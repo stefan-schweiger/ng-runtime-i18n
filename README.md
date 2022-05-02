@@ -1,27 +1,12 @@
-# NgRuntimeI18n
+# Angular Runtime i18n example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
+To run simply use `npm run start`. You can then access the auto detected translation via http://localhost:4200. Or browse another translation via http://localhost:4200/de or http://localhost:4200/en.
 
-## Development server
+To extract translations just use `npm run ng extract-i18n`. The app is currently configured to have a "special" en-x-source locale which is only used so we don't always overwrite the en.json localization file with each extract. This helps to handle EN translations without changing the template source code.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**ATTENTION**: You need to use the JSON translation/interpolation format for your translation files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To see what's actually happening look into:
+* `main.ts` - detect language + load and "apply" language files
+* `app.module.ts` - registerLocaleData + set BASE_HREF and LOCALE_ID
+* `app.component.(ts|html)` - actually use translation (no difference to AOT handling)
